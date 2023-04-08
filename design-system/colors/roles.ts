@@ -68,7 +68,7 @@ const roles = {
     _dark: getColor("red.50"),
     default: getColor("red.60"),
   },
-  onErrorHover: "onError",
+  onErrorHover: onLight,
   info: {
     _dark: getColor("blue.40"),
     default: getColor("blue.50"),
