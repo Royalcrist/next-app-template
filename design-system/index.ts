@@ -10,13 +10,17 @@ const fonts: ChakraTheme["fonts"] = {
   heading: '"Poppins", sans-serif',
 };
 
+console.log(colors);
+
 export const theme = extendTheme({
   styles: {
     global: globalStyles,
   },
   fonts,
   layerStyles,
-  colors,
+  semanticTokens: {
+    colors,
+  },
   textStyles,
   components,
 });

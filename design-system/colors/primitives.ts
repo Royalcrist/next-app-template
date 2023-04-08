@@ -95,7 +95,7 @@ const obsidian = {
 };
 
 const whiteAlpha = {
-  0: "#FFFFFF",
+  0: "transparent",
   1: "rgba(255, 255, 255, 0.01)",
   5: "rgba(255, 255, 255, 0.05)",
   10: "rgba(255, 255, 255, 0.1)",
@@ -107,7 +107,7 @@ const whiteAlpha = {
   70: "rgba(255, 255, 255, 0.7)",
   80: "rgba(255, 255, 255, 0.8)",
   90: "rgba(255, 255, 255, 0.9)",
-  100: "transparent",
+  100: "#FFFFFF",
 };
 
 const blackAlpha = {
@@ -126,7 +126,7 @@ const blackAlpha = {
   100: "#000000",
 };
 
-const primitives = {
+const primitives: { [key: string]: { [key: string]: string } } = {
   red,
   yellow,
   blue,
@@ -135,6 +135,13 @@ const primitives = {
   obsidian,
   whiteAlpha,
   blackAlpha,
+};
+
+export const getColor = (color: string): string => {
+  const [colorName, colorValue] = color.split(".");
+
+  console.log(colorName, colorValue, primitives[colorName][colorValue]);
+  return primitives[colorName][colorValue];
 };
 
 export default primitives;

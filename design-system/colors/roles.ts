@@ -1,96 +1,104 @@
+import { getColor } from "./primitives";
+
+const onBackground = {
+  _dark: getColor("whiteAlpha.80"),
+  default: getColor("obsidian.10"),
+};
+
+const secondaryHover = {
+  _dark: getColor("obsidian.20"),
+  default: getColor("obsidian.95"),
+};
+
+const onLight = getColor("whiteAlpha.100");
+
 const roles = {
   background: {
-    _dark: "obsidian.10",
-    default: "whiteAlpha.100",
+    _dark: getColor("obsidian.10"),
+    default: onLight,
   },
-  onBackground: {
-    _dark: "whiteAlpha.80",
-    default: "obsidian.10",
-  },
+  onBackground,
   surface: {
-    _dark: "obsidian.20",
-    default: "obsidian.95",
+    _dark: getColor("obsidian.20"),
+    default: getColor("obsidian.95"),
   },
-  onSurface: "onBackground",
+  onSurface: onBackground,
   primary: {
-    _dark: "purple.40",
-    default: "purple.50",
+    _dark: getColor("purple.40"),
+    default: getColor("purple.50"),
   },
-  onPrimary: "whiteAlpha.100",
+  onPrimary: onLight,
   primaryHover: {
-    _dark: "purple.50",
-    default: "purple.60",
+    _dark: getColor("purple.50"),
+    default: getColor("purple.60"),
   },
   onPrimaryHover: {
-    _dark: "whiteAlpha.100",
-    default: "whiteAlpha.100",
+    _dark: onLight,
+    default: onLight,
   },
   secondary: "transparent",
-  onSecondary: "onBackground",
-  secondaryHover: {
-    _dark: "obsidian.20",
-    default: "obsidian.95",
-  },
-  onSecondaryHover: "onSecondary",
+  onSecondary: onBackground,
+  secondaryHover,
+  onSecondaryHover: onBackground,
   tertiary: "transparent",
-  onTertiary: "onBackground",
-  tertiaryHover: "secondaryHover",
-  onTertiaryHover: "onSecondaryHover",
+  onTertiary: onBackground,
+  tertiaryHover: secondaryHover,
+  onTertiaryHover: onBackground,
   success: {
-    _dark: "green.40",
-    default: "green.50",
+    _dark: getColor("green.40"),
+    default: getColor("green.50"),
   },
-  onSuccess: "whiteAlpha.100",
+  onSuccess: onLight,
   successHover: {
-    _dark: "green.50",
-    default: "green.60",
+    _dark: getColor("green.50"),
+    default: getColor("green.60"),
   },
-  onSuccessHover: "onSuccess",
+  onSuccessHover: onLight,
   warning: {
-    _dark: "yellow.40",
-    default: "yellow.50",
+    _dark: getColor("yellow.40"),
+    default: getColor("yellow.50"),
   },
-  onWarning: "onSuccess",
+  onWarning: onLight,
   error: {
-    _dark: "red.40",
-    default: "red.50",
+    _dark: getColor("red.40"),
+    default: getColor("red.50"),
   },
-  onError: "onSuccess",
+  onError: onLight,
   errorHover: {
-    _dark: "red.50",
-    default: "red.60",
+    _dark: getColor("red.50"),
+    default: getColor("red.60"),
   },
   onErrorHover: "onError",
   info: {
-    _dark: "blue.40",
-    default: "blue.50",
+    _dark: getColor("blue.40"),
+    default: getColor("blue.50"),
   },
-  onInfo: "onSuccess",
+  onInfo: onLight,
   infoHover: {
-    _dark: "blue.50",
-    default: "blue.60",
+    _dark: getColor("blue.50"),
+    default: getColor("blue.60"),
   },
-  onInfoHover: "onInfo",
+  onInfoHover: onLight,
   discovery: {
-    _dark: "purple.40",
-    default: "purple.50",
+    _dark: getColor("purple.40"),
+    default: getColor("purple.50"),
   },
-  onDiscovery: "onSuccess",
+  onDiscovery: onLight,
   discoveryHover: {
-    _dark: "purple.50",
-    default: "purple.60",
+    _dark: getColor("purple.50"),
+    default: getColor("purple.60"),
   },
-  onDiscoveryHover: "onDiscovery",
+  onDiscoveryHover: onLight,
   fields: {
-    _dark: "obsidian.20",
-    default: "obsidian.95",
+    _dark: getColor("obsidian.20"),
+    default: getColor("blackAlpha.5"),
   },
-  onFields: "onBackground",
-  overlay: "blackAlpha.20",
-  outline: "onBackground",
+  onFields: onBackground,
+  overlay: getColor("blackAlpha.20"),
+  outline: onBackground,
   shadow: {
-    _dark: "whiteAlpha.5",
-    default: "blackAlpha.5",
+    _dark: getColor("whiteAlpha.5"),
+    default: getColor("blackAlpha.5"),
   },
 };
 
